@@ -1,6 +1,7 @@
 import express from 'express';
 import { connectDB } from './database';
 import dotenv from 'dotenv';
+import urlRoutes from './routes/urlRoutes';
 
 dotenv.config();
 
@@ -9,9 +10,8 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('API do Encurtador de URL funcionando!');
-});
+// Rotas principais
+app.use('/', urlRoutes);
 
 connectDB();
 
