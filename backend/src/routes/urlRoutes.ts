@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { UrlModel } from '../models/Url';
 import crypto from 'crypto';
+import { isValidUrl } from '../validators';
 
 const router = Router();
 
@@ -9,6 +10,10 @@ router.post('/encurtar', async (req: Request, res: Response) => {
   const { originalUrl } = req.body;
   if (!originalUrl) {
     return res.status(400).json({ error: 'URL original é obrigatória.' });
+  }
+
+  if (!isValidUrl(originalUrl)) {
+    return res.status(400).json({ error: 'URL inválida.' });
   }
 
   // Gera um código curto aleatório

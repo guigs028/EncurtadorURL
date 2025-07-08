@@ -13,3 +13,5 @@ const UrlSchema = new Schema<IUrl>({
 });
 
 export const UrlModel = mongoose.model<IUrl>('Url', UrlSchema);
+
+
