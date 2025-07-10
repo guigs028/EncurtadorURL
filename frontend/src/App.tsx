@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Encurtador de URL</h1>
+      <h1>Encurtadorrrr de URL</h1>
       <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '1rem' }}>
         <input
           type="url"
