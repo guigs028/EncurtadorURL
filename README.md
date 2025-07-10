@@ -8,15 +8,19 @@ Este projeto é um sistema completo de encurtamento de URLs, com backend em Node
 - Interface web simples e responsiva.
 
 ## Tecnologias Utilizadas
-- **Backend:** Node.js, Express, MongoDB, Mongoose
-- **Frontend:** React, Vite, TypeScript
+- **Backend:** Node.js, Express, MongoDB, Mongoose (hospedado no Render)
+- **Frontend:** React, Vite, TypeScript (hospedado no Vercel)
 
-## Como rodar o projeto
+## Links de Produção
+- **Frontend:** [https://encurtador-url-git-master-guigs-projects.vercel.app/](https://encurtador-url-git-master-guigs-projects.vercel.app/)
+- **Backend:** [https://encurtadorurl-gyg8.onrender.com](https://encurtadorurl-gyg8.onrender.com)
+
+## Como rodar o projeto localmente
 
 ### 1. Clone o repositório
 ```bash
 git clone https://github.com/guigs028/EncurtadorURL.git
-cd seu-repositorio
+cd EncurtadorURL
 ```
 
 ### 2. Backend
@@ -37,16 +41,17 @@ npm run dev
 O frontend estará rodando em `http://localhost:5173`.
 
 ## Como usar
-1. Acesse o frontend em `http://localhost:5173`.
-2. Cole a URL que deseja encurtar e clique em "Encurtar".
-3. O link curto será exibido e pode ser compartilhado.
+- Acesse o frontend em produção: [https://encurtador-url-git-master-guigs-projects.vercel.app/](https://encurtador-url-git-master-guigs-projects.vercel.app/)
+- Cole a URL que deseja encurtar e clique em "Encurtar".
+- O link curto será exibido e pode ser compartilhado.
 
 ## Configuração do Banco de Dados
-- Certifique-se de ter o MongoDB rodando localmente ou configure a string de conexão no arquivo `.env` do backend.
+- O backend utiliza MongoDB (pode ser local ou MongoDB Atlas). No Render, configure a variável de ambiente `MONGO_URI`.
 
 ## Observações
 - O backend já está configurado para aceitar requisições do frontend (CORS).
-- O projeto pode ser facilmente implantado em serviços como Vercel, Heroku, Render, etc.
+- O projeto pode ser facilmente implantado em serviços como Vercel (frontend) e Render (backend).
+- O link encurtado terá o domínio do backend hospedado no Render.
 
 ---
 
