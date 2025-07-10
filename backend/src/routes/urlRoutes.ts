@@ -23,7 +23,7 @@ router.post('/encurtar', async (req: Request, res: Response) => {
   try {
     const url = new UrlModel({ originalUrl, shortCode });
     await url.save();
-    res.json({ shortUrl: `${process.env.BASE_URL || 'http://localhost:3000'}/${shortCode}` });
+    res.json({ shortUrl: `${process.env.BASE_URL}/${shortCode}` });
   } catch (error) {
     res.status(500).json({ error: 'Erro ao salvar URL.' });
   }
