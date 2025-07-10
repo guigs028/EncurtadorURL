@@ -46,7 +46,7 @@ function App() {
       </form>
       {shortUrl && (
         <div className="result" style={{ textAlign: 'center' }}>
-          <p style={{ textAlign: 'center', marginBottom: '0.5rem' }}>URL encurtada:</p>
+          <p style={{ textAlign: 'center', marginBottom: '0.5rem' }}>URL encurtadaaaa:</p>
           <a href={shortUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', textAlign: 'center', wordBreak: 'break-all' }}>{shortUrl}</a>
           <p style={{ textAlign: 'center', marginTop: '0.5rem' }}>(URL longa por conta da hospedagem do back-end no Render)</p>
         </div>
